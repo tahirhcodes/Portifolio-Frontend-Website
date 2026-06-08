@@ -69,16 +69,16 @@ export const Navbar = () => {
                 </div>
             </nav>
 
-            {/* MOBILE MENU */}
             {isMobileMenuOpen && (
-                <div className="md:hidden w-full glass-strong animate-fade-in border-t border-border">
-                    <div className="px-6 py-4 flex flex-col gap-3 w-full">
+                <div className="md:hidden fixed left-0 top-16 w-full max-w-full overflow-x-hidden glass-strong animate-fade-in border-t border-border z-40">
+
+                    <div className="px-6 py-4 flex flex-col gap-3 w-full max-w-full">
 
                         {navlinks.map((link, index) => (
                             <a
                                 href={link.href}
                                 key={index}
-                                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                                className="block w-full text-lg text-muted-foreground hover:text-foreground py-2"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 {link.label}
