@@ -27,9 +27,8 @@ export const Navbar = () => {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-                isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-            }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
+                }`}
         >
             <nav className="w-full max-w-7xl mx-auto px-6 flex justify-between items-center">
 
@@ -59,11 +58,14 @@ export const Navbar = () => {
                 </div>
 
                 {/* MOBILE MENU BUTTON */}
-                <div
-                    className="md:hidden p-2 text-foreground cursor-pointer z-50"
-                    onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-                >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                <div className="md:hidden flex items-center p-2 cursor-pointer shrink-0 z-50">
+                    <button
+                        type="button"
+                        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                        className="p-2"
+                    >
+                        ☰
+                    </button>
                 </div>
             </nav>
 
@@ -84,7 +86,7 @@ export const Navbar = () => {
                         ))}
 
                         <Button className="w-full">
-                            Contact Me
+                            Contact me
                         </Button>
 
                     </div>
