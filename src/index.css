@@ -24,15 +24,19 @@
   --color-surface: #1a2329;
 }
 
+
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow: hidden;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
+    overflow: hidden;
   }
 
   .font-serif {
