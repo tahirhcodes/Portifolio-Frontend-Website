@@ -23,15 +23,15 @@ export const Hero = () => {
             </div>
 
             {/* green dots  */}
-            <div className="absolute w-full h-screen overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {[...Array(50)].map((_, i) => (
                     <div
                         key={i}
                         className="absolute w-1 h-1 rounded-full opacity-40"
                         style={{
                             backgroundColor: "#20B2A6",
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}vw`,
+                            top: `${Math.random() * 100}vh`,
                             animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
                             animationDelay: `{Math.random() * }5s`,
                         }}
